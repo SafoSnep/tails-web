@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title>Tails &ndash; A Furry Art Browser for iOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/main.css?_=1">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="/">
+          <div class="icon" style="background-image: url('/img/icon.png');"></div>Tails
+        </a></h1>
+      <ul class="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="main">
+    <div class="section">
+      <div class="container narrow">
+        <div class="content">
+          <h2>Frequently Asked Questions</h2>
+          <h3>App Usage</h3>
+          <h4>How does the WebM compatibility work?</h4>
+          <p class="smol">If you know of other WebM players on iOS, that can be opened with the x-callback-url protocol, <a href="/contact/">let me know</a>!</p>
+          <p>Some video player apps installed from the App Store can decode and play WebM videos, though Apple doesn't provide hardware decoding support for them. Tails currently supports two external apps for this: <a href="https://apps.apple.com/us/app/vlc-for-mobile/id650377962" target="_blank">VLC</a> and <a href="https://apps.apple.com/us/app/infuse-6/id1136220934" target="_blank">Infuse</a>. After installing either one, select the app from Tails' settings.</p>
+          <p>When an external WebM player is selected, tapping a play icon in the post detail view will open that app. After the video is finished, you'll automatically be directed back to Tails.</p>
+          <p>Both of the supported apps have some limitations though: neither app can be opened to loop or repeat the video automatically. If the video is really short (usually tagged with short_playtime tag), you might be redirected back to Tails almost immediately. VLC has an option for repeating, but it'll have to enabled manually every time, and even then there's a slight stutter as the video buffers again.</p>
+          <h4>How to Reduce Tails' Data Usage</h4>
+          <p>Some data saving tips:</p>
+          <ul class="dash marg-bot">
+            <li>Enable <a href="https://support.apple.com/en-us/HT210596" target="_blank">Low Data Mode</a> in your device's settings</li>
+            <li>Enable &ldquo;Launch into Search&rdquo; from the app's settings (so no thumbnails are loaded without searching)</li>
+            <li>Log Out of the app (so that your blacklist and voted posts won't be loaded)</li>
+          </ul>
+          <p>Specifically, the Low Data Mode disables all preloading, loads low resolution thumbnails, loads fewer posts at a time in infinite scrolling, and disables the tag subscription updates.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container narrow">
+        <div class="content">
+          <h3>Technical Details</h3>
+          <h4>App crashes on launch</h4>
+          <p class="smol">(Assuming you've installed it with AltStore)</p>
+          <p>AltStore can &ldquo;code sign&rdquo; apps for a week, and they should be resigned before that time runs out. However, if you're away from your computer (AltServer) or the connection hasn't worked for some reason, the app might become unsigned and fail to launch because of that; iOS will run only apps with a valid signature.</p>
+          <p>No data has been lost, unless you've deleted the app manually. Simply open the AltStore app again on your device and verify that the resigning succeeds, and Tails will return to normal. If you can't open AltStore either, reinstall it first with your computer.</p>
+          <p>Deleting Tails will delete all data associated with it, most importantly your favorited tags. <b>Do not delete the app as a first measure if you're trying to fix code signing issues.</b></p>
+          <h4>How do I install AltStore?</h4>
+          <p>There are easy to follow instructions on AltStore's <a href="https://altstore.io/faq/" target="_blank">FAQ page</a> for both Windows and Mac. AltStore doesn't currently support Linux, but it has been <a href="https://github.com/rileytestut/AltStore/issues/6" target="_blank">discussed</a>.</p>
+          <p><b>Tip:</b> Since AltStore (and other such tools) require the use of an Apple ID, I recommend <a href="https://appleid.apple.com/account#!&page=create" target="_blank">creating a new one</a>, that you <b>only</b> use for these tools.</p>
+          <h4>I don't want to install AltStore</h4>
+          <p>AltStore seems like the most frictionless solution to me, and that's the only installation method I've personally tested and verified to work, but you can always sideload the .ipa file with any sideloading tool of your choice. Just be sure to always download the .ipa file only from the official source, <a href="https://tails.safo.fi">https://tails.safo.fi</a>.</p>
+          <p>In the future you might come across some 3rd party cloud services offering to install Tails without a computer. These services always require you to trust a company to install an enterprise certificate or a profile onto your device. These might be &ldquo;Mobile Device Management&rdquo; (MDM) profiles, meant for system administrators of schools or large businesses. MDM allows access for a lot of settings and options, including clearing your device's passcode or erasing your device completely. In the past MDM profiles have also been abused to track user location, app use, email accounts, camera permissions, and browsing history.</p>
+          <p>Even if a certificate management service isn't installing an MDM profile on your device, the .ipa file they install might be a modified version of the official release. These modifications might be unnoticeable and involve only some sort of user tracking, but it wouldn't be impossible to exploit any vulnerabilities in iOS to again gain access to your entire device.<sup>1</sup></p>
+          <p>When installed from an unofficial source, ads could also be injected into the app &ndash; if you see any ads in Tails, you're definitely using an unofficial build. By using any version of Tails with ads, you're only benefitting the party that has modified the .ipa; you're not supporting the development of this app, not the upkeep of e621, and not any artists.</p>
+          <h4>Why is iOS 13 required?</h4>
+          <p>iOS 13 was a pretty big update &ldquo;under the hood&rdquo;, introducing a lot of quality of life improvements for app developers. To the user these improvements might result in better performance or a smaller download size, but honestly, it's just nicer to write modern code for modern frameworks. I expect to be adopting new programming features pretty aggressively in the future, too.</p>
+          <h4>Will there be an Android version?</h4>
+          <p>An Android version of Tails is unlikely to happen &ndash; Tails wasn't written as a cross-platform application. It's heavily based on iOS' UI frameworks and written entirely on Apple's Swift programming language.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container narrow">
+        <div class="content">
+          <h3>Other</h3>
+          <h4>Why is this free? Are you collecting my information to sell or whatever?</h4>
+          <p>Though Tails is free and adless, <a href="/privacy/">I am not collecting your information</a>, or monetizing the app in any way.</p>
+          <p>Tails is sort of a &ldquo;passion project&rdquo; of mine. I have fun creating it! As long as e621.net doesn't charge me for using their API and doesn't require me to run ads, I'll gladly provide Tails available to download for free. Of course the flip side of the coin here is that I don't provide any kind of &ldquo;customer support&rdquo;, warranty, or promises of longevity for the app. This isn't a business, and I don't want to make this into one.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container narrow">
+        <div class="content">
+          <p class="smol"><sup>1</sup> Technically, the official release of Tails could also do all of that, and technically, so could AltStore. Install apps only from Apple's App Store if you need to stay safe, and always do your own research.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p><a href="/">Tails</a> &copy; SafoSnep 2020 &mdash; <a href="/privacy/">Privacy Policy</a> &mdash; <a href="/contact/">Contact</a></p>
+  </footer>
+</body>
+</html>

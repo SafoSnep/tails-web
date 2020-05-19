@@ -82,7 +82,12 @@
         <div class="dl">
           <h3>Download and Install</h3>
           <p>Please don't go looking for Tails in the App Store &ndash; its rules deny an app like Tails point-blank. Instead, the suggested installation method is to &ldquo;sideload&rdquo; the app via <a href="https://altstore.io/" target="_blank">AltStore</a>. No jailbreak required!</p>
-          <h4>Download is currently unavailable. Check back soon!</h4>
+          <div class="btns"><a href="https://github.com/SafoSnep/tails/releases/download/v1.0/Tails-1.0.0-81018120c6f552c7f87d9eef151b3288f0b2f68ea18a067dc8e6fb92b8b8af30.ipa" class="button" onclick="checkVersionAndDownload(event);">Download .ipa</a><a class="button" href="/source.json">AltStore Source</a></div>
+          <script src="/js/dl.js?_=1"></script>
+          <div class="hash-container"><input type="checkbox" id="hash-input">
+            <p class="smol"><b>Version 1.0</b> (7.32 MB), released on 2020-05-19. Requires iOS&nbsp;13 or newer. <label for="hash-input"><span class="show">Show</span><span class="hide">Hide</span> hash</label></p>
+            <p class="smol hashes">SHA-256: <code class="break">81018120c6f552c7f87d9eef151b3288f0b2f68ea18a067dc8e6fb92b8b8af30</code></p>
+          </div>
           <h3>Quick Start</h3>
           <ol class="quickstart" start="0">
             <li>(Install AltStore)</li>

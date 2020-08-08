@@ -58,7 +58,7 @@
         </div>
         <div class="text">
           <h3>A Furry 🦊 Art Browser for iOS</h3>
-          <p>Tails is built to provide a great way to browse interesting content on your mobile devices with a carefully crafted, fully native, touchscreen focused UI fitting right into modern iOS. The first public release supports the following features:</p>
+          <p>Tails is built to provide a great way to browse interesting content on your mobile devices with a carefully crafted, fully native, touchscreen focused UI fitting right into modern iOS. It currently supports the following features:</p>
           <ul class="dash">
             <li>Searching and Tag Autocompletion</li>
             <li>Full-res File Downloads</li>
@@ -82,12 +82,15 @@
         <div class="dl">
           <h3>Download and Install</h3>
           <p>Please don't go looking for Tails in the App Store &ndash; its rules deny an app like Tails point-blank. Instead, the suggested installation method is to &ldquo;sideload&rdquo; the app via <a href="https://altstore.io/" target="_blank">AltStore</a>. No jailbreak required!</p>
-          <div class="btns"><a href="https://github.com/SafoSnep/tails/releases/download/v1.0/Tails-1.0.0-81018120c6f552c7f87d9eef151b3288f0b2f68ea18a067dc8e6fb92b8b8af30.ipa" class="button" onclick="checkVersionAndDownload(event);">Download .ipa</a><a class="button" href="/source.json">AltStore Source</a></div>
+          <div class="btns"><a href="https://github.com/SafoSnep/tails/releases/download/v1.1/Tails-1.1.0-f2c0dd19ca75720f5045094eb5b9f46ccacf5202c1bd1c91ab16b77372b2d47c.ipa" class="button" onclick="checkVersionAndDownload(event);">Download .ipa</a><a class="button" href="/source.json">AltStore Source</a></div>
           <script src="/js/dl.js?_=1"></script>
           <div class="hash-container"><input type="checkbox" id="hash-input">
-            <p class="smol"><b>Version 1.0</b> (7.32 MB), released on 2020-05-19. Requires iOS&nbsp;13 or newer. <label for="hash-input"><span class="show">Show</span><span class="hide">Hide</span> hash</label></p>
-            <p class="smol hashes">SHA-256: <code class="break">81018120c6f552c7f87d9eef151b3288f0b2f68ea18a067dc8e6fb92b8b8af30</code></p>
+            <p class="smol"><b>Version 1.1</b> (7.35 MB). Requires iOS&nbsp;13 or newer. <label for="hash-input"><span class="show">Show</span><span class="hide">Hide</span> hash</label></p>
+            <p class="smol hashes">SHA-256: <code class="break">f2c0dd19ca75720f5045094eb5b9f46ccacf5202c1bd1c91ab16b77372b2d47c</code></p>
           </div>
+          <h3>Release Notes for Version 1.1</h3>
+          <p class="smol">Released on 2020-08-08.</p>
+          <p>General improvements in this version:<br />– Improved Cloudflare captcha handling<br />– Built-in support for proxying<br />– Support for manually changing the web endpoint the app connects to<br />– Option to force low data mode on, regardless of device’s setting<br />– The app should load even less secondary information in low data mode<br />– Better error messages when a search or a pool doesn’t have any posts<br /><br />Changes to viewing pools:<br />– Tapping an image in a pool view zooms it in instead of opening the post’s details, to match the detail view behavior. Details can now be opened from the image’s long press menu.<br />– Improvements to the pool navigation to keep the navigational hierarchy flat<br />– Fixed downloading posts from a pool<br /><br />Other resolved issues:<br />– Reduced memory usage overall, making the app less likely to crash after browsing a lot of posts<br />– Fixed the app showing a wrong post after returning from a WebM player app<br />– Fixed a crash when opening certain posts</p>
           <h3>Quick Start</h3>
           <ol class="quickstart" start="0">
             <li>(Install AltStore)</li>

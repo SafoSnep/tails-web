@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Tails &ndash; A Furry Art Browser for iOS</title>
+  <meta name="title" content="Tails &ndash; A Furry Art Browser for iOS">
+  <meta name="description" content="Tails is a furry art app for browsing e621 and e926 on your iPhone or iPad.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/main.css?_=1">
+  <link rel="stylesheet" href="/css/main.css?_=2">
 </head>
 <body>
   <header>
@@ -58,64 +60,69 @@
         </div>
         <div class="text">
           <h3>A Furry 🦊 Art Browser for iOS</h3>
-          <p>Tails is built to provide a great way to browse interesting content on your mobile devices with a carefully crafted, fully native, touchscreen focused UI fitting right into modern iOS. It currently supports the following features:</p>
-          <ul class="dash">
-            <li>Searching and Tag Autocompletion</li>
-            <li>Full-res File Downloads</li>
-            <li>Animated GIFs and PNGs</li>
-            <li>Blacklisting (if logged in)</li>
-            <li>Infinite Scrolling</li>
-            <li>Hi-Res Images</li>
-            <li>iPhone and iPad Support</li>
-          </ul>
-          <p>Tails also enhances browsing with features that are currently not possible on any iOS web browser:</p>
-          <ul class="dash">
-            <li>Light and Dark Themes</li>
-            <li>Local Tag Subscriptions</li>
-            <li>WebM Compatibility (with 3rd party apps)</li>
-          </ul>
+          <p>Tails is built to provide a great way to browse e621.net and e926.net on your iPhone or iPad with a carefully crafted, fully native, touchscreen focused UI fitting right into modern iOS.</p><a href="#download" class="button">Download for iPhone/iPad</a>
+          <div class="front-cloud">
+            <ul class="row">
+              <li>Hi-Res Images</li>
+              <li>Searching and Tag Autocompletion</li>
+              <li><b>Favorites and Voting</b></li>
+            </ul>
+            <ul class="row">
+              <li><b>Infinite Scrolling</b></li>
+              <li>Open in Web Browsers</li>
+              <li>Post Filtering/&#8203;Blacklisting</li>
+            </ul>
+            <ul class="row">
+              <li>SFW/&#8203;NSFW Toggle</li>
+              <li><b>Animated GIFs and PNGs</b></li>
+              <li>Passcode Lock When Opened</li>
+            </ul>
+            <ul class="row">
+              <li>Touch ID and Face ID</li>
+              <li>Multiple Themes and Icons</li>
+              <li><b>Light and Dark Modes</b></li>
+            </ul>
+            <ul class="row">
+              <li><b>WebM Video Playback</b></li>
+              <li>Full-res File Downloads</li>
+              <li>Local Tag Subscriptions</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="section">
+    </div><a name="download"></a>
+    <div class="section front-dl">
       <div class="container">
         <div class="dl">
           <h3>Download and Install</h3>
-          <p>Please don't go looking for Tails in the App Store &ndash; its rules deny an app like Tails point-blank. Instead, the suggested installation method is to &ldquo;sideload&rdquo; the app via <a href="https://altstore.io/" target="_blank">AltStore</a>. No jailbreak required!</p>
-          <div class="btns"><a href="https://github.com/SafoSnep/tails/releases/download/v1.1/Tails-1.1.0-f2c0dd19ca75720f5045094eb5b9f46ccacf5202c1bd1c91ab16b77372b2d47c.ipa" class="button" onclick="checkVersionAndDownload(event);">Download .ipa</a><a class="button" href="/source.json">AltStore Source</a></div>
-          <script src="/js/dl.js?_=1"></script>
+          <p>Please don't go looking for Tails in the App Store &ndash; its rules deny an app like Tails point-blank. Instead, the suggested installation method is to &ldquo;sideload&rdquo; the app via AltStore. No jailbreak required!</p>
+          <div class="btns"><a href="altstore://install?url=https://github.com/SafoSnep/tails/releases/download/v2.0/Tails-2.0.0-0a7384dbd96e28070950bf7908926ed6e70adce8bcf0fe9e2b4a284f9bd3e02d.ipa" class="button" onclick="checkVersionAndDownload(event);">Install with AltStore</a><a class="button" href="altstore://source?url=https://tails.safo.fi/source.json">AltStore Source</a></div>
           <div class="hash-container"><input type="checkbox" id="hash-input">
-            <p class="smol"><b>Version 1.1</b> (7.35 MB). Requires iOS&nbsp;13 or newer. <label for="hash-input"><span class="show">Show</span><span class="hide">Hide</span> hash</label></p>
-            <p class="smol hashes">SHA-256: <code class="break">f2c0dd19ca75720f5045094eb5b9f46ccacf5202c1bd1c91ab16b77372b2d47c</code></p>
+            <p class="smol">Requires iOS&nbsp;14 or newer. You may also download <a href="https://github.com/SafoSnep/tails/releases/download/v2.0/Tails-2.0.0-0a7384dbd96e28070950bf7908926ed6e70adce8bcf0fe9e2b4a284f9bd3e02d.ipa" onclick="checkVersionAndDownload(event);"><b>Version 2.0</b> as .ipa</a> (8.13&nbsp;MB, <label for="hash-input"><span class="show">show</span><span class="hide">hide</span> hash</label>) for a manual installation.</p>
+            <p class="smol hashes">SHA-256: <code class="break">0a7384dbd96e28070950bf7908926ed6e70adce8bcf0fe9e2b4a284f9bd3e02d</code></p>
           </div>
-          <h3>Release Notes for Version 1.1</h3>
-          <p class="smol">Released on 2020-08-08.</p>
-          <p>General improvements in this version:<br />– Improved Cloudflare captcha handling<br />– Built-in support for proxying<br />– Support for manually changing the web endpoint the app connects to<br />– Option to force low data mode on, regardless of device’s setting<br />– The app should load even less secondary information in low data mode<br />– Better error messages when a search or a pool doesn’t have any posts<br /><br />Changes to viewing pools:<br />– Tapping an image in a pool view zooms it in instead of opening the post’s details, to match the detail view behavior. Details can now be opened from the image’s long press menu.<br />– Improvements to the pool navigation to keep the navigational hierarchy flat<br />– Fixed downloading posts from a pool<br /><br />Other resolved issues:<br />– Reduced memory usage overall, making the app less likely to crash after browsing a lot of posts<br />– Fixed the app showing a wrong post after returning from a WebM player app<br />– Fixed a crash when opening certain posts</p>
-          <h3>Quick Start</h3>
-          <ol class="quickstart" start="0">
-            <li>(Install AltStore)</li>
-            <li>Open this page with Safari on the same device you've installed AltStore</li>
-            <li>Tap the &ldquo;Download .ipa&rdquo; button above and the download will begin in the top right corner</li>
-            <li>Tap the downloaded file after it's finished downloading</li>
-            <li>Tap the Share Icon in the top right corner</li>
-            <li>Select &ldquo;Export to AltStore&rdquo; from the top row (scroll to the right and tap &ldquo;More&rdquo; if it's not immediately visible)</li>
-          </ol>
-          <p class="help smol">Need any help? Please read <a href="/faq/#installation">AltStore directions</a>. Don't want to install AltStore? Here's some information on <a href="/faq/#other-installation-methods">alternative methods</a>.</p>
+          <p class="help smol">Please read the <a href="/faq/#installation">FAQ page</a> first if you're unfamiliar with AltStore or need help installing it, and for information on alternative installation methods.</p>
+          <script src="/js/dl.js?_=2"></script>
+        </div>
+        <div class="relnotes">
+          <h3>Release Notes</h3>
+          <p class="smol">Version 2.0 was released on 2021-02-27. View <a href="https://github.com/SafoSnep/tails/releases" target="_blank">older releases</a>.</p>
+          <p>WebM’s playing natively in app:<br />- If you’ve previously used an external WebM player (VLC or Infuse), the setting will automatically default to the new in-app player<br /><br />New search view:<br />- Supports multiple tags in one search, just like it works on the web page<br />- Last typed word will autocomplete (taking into account the special "-" and "~" prefixes too)<br />- Supports (but won’t autocomplete) all meta searches, like date:, order:, pool:, and so on<br />- Long pressing on tags in a post detail view has two new search options: add to current search and filter from current search<br /><br />Passcode lock when app is launched:<br />- Choose between a 6-digit and alphanumeric passcode that will be required to open the app<br />- Hides the app screenshot from multitasking menu when enabled<br />- Supports face recognition and fingerprint reading too on most devices<br /><br />Alternative web browsers:<br />- Browser can be changed from Safari to Firefox, Brave or Chrome<br />- Tails will also honor the systemwide default browser<br /><br />Other resolved issues:<br />- Improved dark mode text visibility<br />- Fixed infinite scrolling in pools<br />- Fixed a visual glitch with the image moving upwards when zooming images in<br />- Fixed a subscribed tag to no longer show as updated if the new posts are blacklisted<br />- Fixed incorrect colors when automatic light/dark mode switching is used<br />- Fixed posts appearing as zoomed after navigation<br />- Fixed incorrect content overlapping on devices with a camera notch in the screen</p>
         </div>
       </div>
     </div>
     <div class="section front-screenshots">
       <div class="container">
         <div class="content">
-          <h2>Screenshots</h2>
+          <h2>iPhone Screenshots</h2>
         </div>
         <div class="columns">
           <div class="col one-third order-last">
             <h3>Detail View</h3>
-            <ul class="dash">
+            <ul class="dash keyval">
               <li><b>Voting:</b> Tap to upvote, swipe down to downvote</li>
               <li><b>Favoriting:</b> Tap to favorite, tap again to cancel</li>
-              <li><b>Open in Safari:</b> Opens the post in the web browser to access features unavailable in Tails</li>
+              <li><b>Open in Web Browser:</b> Opens the post in your browser to access features unavailable in Tails</li>
               <li><b>Pool View:</b> Displays posts as a continuous, vertical list instead of the side-by-side pages</li>
               <li><b>Zoomable Image:</b> Tap or pinch to zoom the image, and long press to save it to your device</li>
               <li><b>Hiding Navigation Bar:</b> Tap the image with two fingers for a fullscreen view</li>
@@ -160,11 +167,14 @@
     <div class="section front-screenshots">
       <div class="container">
         <div class="content">
+          <h2>iPad Screenshots</h2>
+        </div>
+        <div class="content">
           <div class="columns">
             <div class="col one-third">
-              <h3>iPadOS Enhancements</h3>
+              <h3>Drag-and-Drop</h3>
               <p>Tails supports iPadOS's Drag-and-Drop system with multiple items, and multitasking with Split Screen and Slide Over.</p>
-              <p>It works great with 3rd party apps, such as <a href="https://vizref.com/" target="_blank">VizRef</a>, and for saving multiple images to your device or any cloud service in your Files app by dragging them over.</p>
+              <p>It works great with 3rd party apps that also support Drag-and-Drop, and for saving multiple images to your device or any cloud service in your Files app by dragging them&nbsp;over.</p>
               <p class="smol">(Alternatively, save single images to your device by long pressing on them, for example on devices without drag-and-drop support.)</p>
             </div>
             <div class="col two-thirds">
@@ -196,7 +206,7 @@
     </div>
   </div>
   <footer>
-    <p><a href="/">Tails</a> &copy; SafoSnep 2020 &mdash; <a href="/privacy/">Privacy Policy</a> &mdash; <a href="/contact/">Contact</a></p>
+    <p><a href="/">Tails</a> &copy; SafoSnep 2020&ndash;2021<br /><a href="/privacy/">Privacy Policy</a> &mdash; <a href="/contact/">Contact</a></p>
   </footer>
 </body>
 </html>

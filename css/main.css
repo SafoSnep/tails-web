@@ -61,14 +61,20 @@ html {
   padding: 0
 }
 body {
-  background: #fff;
-  color: #333;
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica,"Segoe UI",Roboto,Arial,sans-serif;
-  font-size: 15px;
-  line-height: 24px;
+  background: #191c22;
+  color: #d3e4ef;
+  font: 500 15px/22px -apple-system,BlinkMacSystemFont,Inter,Helvetica,"Segoe UI",Roboto,Arial,sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh
+}
+h1,
+h2 {
+  font-weight: 800
+}
+b,
+h3 {
+  font-weight: 700
 }
 .main {
   flex: 1;
@@ -82,29 +88,12 @@ body {
 .container.narrow {
   max-width: 768px
 }
+.container.faded li,
+.container.faded p {
+  color: rgba(211,228,239,.8)
+}
 .marg-top {
   margin-top: 32px
-}
-footer {
-  width: 100%;
-  height: 64px;
-  background: #f6f8f9;
-  text-align: center;
-  box-shadow: inset 0 1px 0 0 rgba(0,0,0,.04)
-}
-footer p {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-  line-height: 64px;
-  opacity: .8
-}
-footer p a {
-  color: inherit;
-  text-decoration: none
-}
-footer p a:hover {
-  text-decoration: underline
 }
 a {
   color: #ed7b1f;
@@ -112,32 +101,36 @@ a {
   cursor: pointer
 }
 a:hover {
-  color: #c96310;
+  color: #b6590f;
   text-decoration: underline
-}
-h3 {
-  width: 100%;
-  border-bottom: 1px solid rgba(51,51,51,.1);
-  padding-bottom: 8px;
-  margin-bottom: 8px
-}
-h3:not(:first-child) {
-  margin-top: 32px
 }
 p {
   margin: 8px 0
 }
 h2 {
-  margin: 32px 0
+  margin: 32px 0;
+  font-size: 199.9396%
+}
+h3 {
+  width: 100%;
+  border-bottom: 1px solid rgba(211,228,239,.1);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  font-size: 141.4%
+}
+h3:not(:first-child) {
+  margin-top: 32px
 }
 h4 {
-  margin: 32px 0 8px
+  margin: 32px 0 8px;
+  font-size: 100%;
+  line-height: 100%
 }
 hr {
   margin: 32px 0;
   height: 1px;
   border: none;
-  background: rgba(51,51,51,.1)
+  background: rgba(211,228,239,.1)
 }
 .section {
   margin: 64px 0
@@ -166,10 +159,41 @@ ul.dash li:before {
   opacity: .5
 }
 ul.dash li:not(:last-child) {
-  margin-bottom: 8px
+  margin-bottom: 4px
 }
 ul.dash.marg-bot {
   margin-bottom: 16px
+}
+ul.keyval li {
+  color: rgba(211,228,239,.7)
+}
+ul.keyval li b {
+  color: #d3e4ef
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  vertical-align: top;
+  background: #ed7b1f;
+  background: linear-gradient(#ed7b1f,#d24711);
+  color: #fff!important;
+  margin: 8px 16px 8px 0;
+  padding: 4px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none!important;
+  font-size: 14px;
+  font-weight: 600
+}
+.button:hover {
+  background: #c96310
+}
+.button:first-child {
+  min-width: 128px
+}
+.button:last-child {
+  margin-right: 0!important
 }
 @media (max-width:767px) {
   .content {
@@ -216,6 +240,10 @@ ul.dash.marg-bot {
 .screenshot-c.iphone .screenshot {
   padding-top: 216.53333%
 }
+.screenshot-c.iphone .screenshot .img,
+.screenshot-c.iphone .screenshot picture {
+  background: #191c22
+}
 .screenshot-c.iphone .screenshot .img:after,
 .screenshot-c.iphone .screenshot picture:after {
   content: "";
@@ -224,7 +252,7 @@ ul.dash.marg-bot {
   right: 0;
   bottom: 0;
   left: 0;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.1)
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04)
 }
 .screenshot-c.iphone .screenshot .img,
 .screenshot-c.iphone .screenshot .img:after,
@@ -235,6 +263,10 @@ ul.dash.marg-bot {
 .screenshot-c.ipad-landscape .screenshot {
   padding-top: 69.84925%
 }
+.screenshot-c.ipad-landscape .screenshot .img,
+.screenshot-c.ipad-landscape .screenshot picture {
+  background: #191c22
+}
 .screenshot-c.ipad-landscape .screenshot .img:after,
 .screenshot-c.ipad-landscape .screenshot picture:after {
   content: "";
@@ -243,7 +275,7 @@ ul.dash.marg-bot {
   right: 0;
   bottom: 0;
   left: 0;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.1)
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04)
 }
 .screenshot-c.ipad-landscape .screenshot .img,
 .screenshot-c.ipad-landscape .screenshot .img:after,
@@ -327,31 +359,33 @@ p.smol.screenshot-text a:hover {
 header {
   padding: 32px 0;
   text-align: center;
-  background: linear-gradient(to bottom,#fbe5d2 0,rgba(251,229,210,.738) 19%,rgba(251,229,210,.541) 34%,rgba(251,229,210,.382) 47%,rgba(251,229,210,.278) 56.5%,rgba(251,229,210,.194) 65%,rgba(251,229,210,.126) 73%,rgba(251,229,210,.075) 80.2%,rgba(251,229,210,.042) 86.1%,rgba(251,229,210,.021) 91%,rgba(251,229,210,.008) 95.2%,rgba(251,229,210,.002) 98.2%,rgba(251,229,210,0) 100%)
+  background: linear-gradient(to bottom,#152943 0,rgba(21,41,67,.738) 19%,rgba(21,41,67,.541) 34%,rgba(21,41,67,.382) 47%,rgba(21,41,67,.278) 56.5%,rgba(21,41,67,.194) 65%,rgba(21,41,67,.126) 73%,rgba(21,41,67,.075) 80.2%,rgba(21,41,67,.042) 86.1%,rgba(21,41,67,.021) 91%,rgba(21,41,67,.008) 95.2%,rgba(21,41,67,.002) 98.2%,rgba(21,41,67,0) 100%)
 }
 header h1 {
   font-size: 32px;
-  line-height: 32px;
+  line-height: 48px;
   font-weight: 200;
   margin: 32px 0 16px -8px;
-  color: #ed7b1f
+  color: #d3e4ef
 }
 header h1 a {
   color: inherit;
   text-decoration: none
 }
 header h1 a:hover {
-  text-decoration: underline
+  text-decoration: underline;
+  color: #ed7b1f
 }
 header h1 .icon {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   background: transparent 50% 50% no-repeat;
   background-size: cover;
-  border-radius: 8px;
+  border-radius: 14px;
   display: inline-block;
   vertical-align: top;
-  margin-right: 8px
+  margin-right: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.08),0 4px 8px rgba(0,0,0,.1)
 }
 header .nav {
   flex: 0 0 auto;
@@ -365,9 +399,33 @@ header .nav li {
 header .nav li:not(:last-child) {
   margin-right: 16px
 }
+header .nav li a {
+  color: #d3e4ef
+}
+footer {
+  width: 100%;
+  min-height: 64px;
+  background: #192332;
+  text-align: center;
+  box-shadow: inset 0 1px 0 0 rgba(255,255,255,.04)
+}
+footer p {
+  margin: 12px 0 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 20px;
+  opacity: .8
+}
+footer p a {
+  color: inherit;
+  text-decoration: none
+}
+footer p a:hover {
+  text-decoration: underline
+}
 .hero {
-  background: linear-gradient(white,#f3ecea,#e9f3f9);
-  box-shadow: inset 0 -1px 0 0 rgba(0,0,0,.08)
+  background: linear-gradient(#191c22,#131519,#2a2422);
+  box-shadow: inset 0 -1px 0 0 rgba(255,255,255,.04),0 8px 16px -12px rgba(0,0,0,.2)
 }
 .hero .container {
   display: flex;
@@ -415,7 +473,8 @@ header .nav li:not(:last-child) {
   background-size: contain;
   box-shadow: -32px 0 32px -32px rgba(0,0,0,.3);
   display: flex;
-  overflow: hidden
+  overflow: hidden;
+  background: #191c22
 }
 .hero .container .imgs .img-c .img-i picture img {
   width: 100%;
@@ -429,7 +488,7 @@ header .nav li:not(:last-child) {
   right: 0;
   bottom: 0;
   left: 0;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.1)
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04)
 }
 .hero .container .imgs .img-c .img-i picture,
 .hero .container .imgs .img-c .img-i picture:after {
@@ -487,7 +546,8 @@ header .nav li:not(:last-child) {
   font-style: italic;
   opacity: .6;
   position: relative;
-  z-index: 3
+  z-index: 3;
+  margin-top: 16px
 }
 .hero .container .imgs p.smol a {
   color: inherit;
@@ -515,15 +575,42 @@ header .nav li:not(:last-child) {
   margin-top: 16px;
   margin-bottom: 16px
 }
-.hero .container .text ul {
-  margin: 8px 0 16px
+.hero .container .text .button {
+  margin-top: 16px;
+  margin-bottom: 16px
 }
-.hero .container .text ul:not(:last-child) {
-  margin-bottom: 32px
+.hero .container .text .front-cloud {
+  margin: 16px 0;
+  padding: 8px 16px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+  border-radius: 12px
+}
+.hero .container .text .front-cloud ul.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 16px 0
+}
+.hero .container .text .front-cloud ul.row li {
+  color: rgba(211,228,239,.7);
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 2px 0
+}
+.hero .container .text .front-cloud ul.row li:not(:first-child) {
+  padding-left: 8px
+}
+.hero .container .text .front-cloud ul.row li:not(:last-child) {
+  padding-right: 8px
+}
+.hero .container .text .front-cloud ul.row li b {
+  color: #d3e4ef
 }
 @media (max-width:767px) {
   .hero .container {
-    flex-direction: column-reverse
+    flex-direction: column-reverse;
+    padding-bottom: 16px
   }
   .hero .container .imgs,
   .hero .container .text {
@@ -532,43 +619,29 @@ header .nav li:not(:last-child) {
   .hero .container .text {
     padding: 0 16px
   }
+  .hero .container .text .front-cloud {
+    margin-left: -16px;
+    margin-right: -16px
+  }
   .hero .container .imgs {
-    max-width: 300px;
-    margin-top: 64px;
+    max-width: 350px;
+    margin-top: 32px;
     padding: 0
   }
   .hero .container .imgs .below {
-    left: 0;
-    right: 0;
+    left: -16px;
+    right: 16px;
     perspective: 768px
   }
 }
 .dl {
-  background: #f6f8f9;
-  border-radius: 8px;
-  padding: 32px
+  background: #192332;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04)
 }
 .dl .btns {
-  margin: 32px 0 16px
-}
-.dl .btns .button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  vertical-align: top;
-  background: #ed7b1f;
-  color: #fff;
-  margin: 0 16px 0 0;
-  padding: 4px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color .4s cubic-bezier(.075,.82,.165,1);
-  font-size: 14px;
-  font-weight: 600
-}
-.dl .btns .button:hover {
-  background: #d76a11
+  margin: 16px 0
 }
 .dl .btns .button:first-child {
   min-width: 128px
@@ -581,12 +654,12 @@ header .nav li:not(:last-child) {
 }
 .dl hr {
   border: none;
-  background: rgba(51,51,51,.1);
+  background: rgba(211,228,239,.1);
   height: 1px;
   margin: 32px 0
 }
 .dl .help {
-  margin: 20px 0 0!important
+  margin: 16px 0 0!important
 }
 .dl ol.quickstart {
   list-style: decimal;
@@ -632,8 +705,24 @@ header .nav li:not(:last-child) {
     padding-left: 16px;
     padding-right: 16px
   }
-  .dl .btns .button {
-    margin-right: 8px
+}
+.relnotes {
+  border-radius: 12px;
+  padding: 32px 32px 0
+}
+.relnotes p.smol a {
+  color: inherit;
+  font-style: italic;
+  opacity: .7
+}
+@media (max-width:767px) {
+  .relnotes {
+    padding: 32px 16px 0
+  }
+}
+@media (max-width:767px) {
+  .front-dl {
+    margin-top: 32px
   }
 }
 .front-screenshots h3 {
@@ -658,8 +747,21 @@ header .nav li:not(:last-child) {
     width: 100%
   }
 }
+@media (min-width:768px) {
+  .front-screenshots h2 {
+    border-bottom: 1px solid rgba(211,228,239,.1);
+    padding-bottom: 8px
+  }
+}
 @media (max-width:767px) {
   .front-screenshots .columns .col {
     width: 100%
   }
+}
+.contacts p span.smol {
+  display: block;
+  margin: -2px 0 0;
+  font-size: 13px;
+  line-height: 18px;
+  opacity: .6
 }
